@@ -1,4 +1,5 @@
 const resultDiv = document.getElementById("result");
+const testForm = document.getElementById("testForm");
 const testFormBtn = document.getElementById("testFormBtn");
 
 testForm.onsubmit = async (event) => {
@@ -9,7 +10,7 @@ testForm.onsubmit = async (event) => {
 
   testFormBtn.classList.add("btn-secondary");
   try {
-    const response = await fetch("/generate-test", {
+    const response = await fetch("/tests", {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // Specify that the request body is JSON
@@ -23,7 +24,7 @@ testForm.onsubmit = async (event) => {
     }
 
     const result = await response.json();
-    resultDiv.innerHTML = `<p class="text-success">${result.message}</p><a href="${result.downloadLink}" download>Download your test</a>`;
+    resultDiv.innerHTML = `<p class="text-success">${result.message}</p><a href="${result.downloadLink}" download="true">Download your test</a>`;
   } catch (error) {
     // Display the error message
     resultDiv.innerHTML = `<p class="text-danger">Error: ${error.message}</p>`;
