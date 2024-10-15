@@ -28,6 +28,8 @@ def main():
   # Get input from Node.js (piped as command line argument)
   raw_input = sys.argv[1]  # Raw input is passed from Node.js
   lines = raw_input.splitlines()
+  if lines[-1] != '':
+    lines.append('') # Add an empty line at the end to signify end of input data
 
   questions = []
   current_question = []

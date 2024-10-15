@@ -1,4 +1,4 @@
-// routes/users.js
+// routes/tests.js
 const express = require("express");
 const { spawn } = require("child_process");
 const fs = require("fs");
@@ -60,8 +60,8 @@ router.get("/:filename", (req, res) => {
 // Endpoint to handle form submission
 router.post("/", async (req, res) => {
   const { testName, questions } = req.body;
-  // Ensure input data is provided
   console.log(testName, questions);
+  // Ensure input data is provided
   if (!testName || !questions) {
     return res
       .status(400)
@@ -74,8 +74,8 @@ router.post("/", async (req, res) => {
     // Spawn Python process to generate test file
     const pyProcess = spawn("python", [
       "test_generator.py", // python script filename
-      questions, // 1st prop - user's input
-      filepath, // 2nd prop - file to write to
+      questions, // 1st arg - user's input
+      filepath, // 2nd arg - file to write to
     ]);
 
     // Handle Python script 'print' output

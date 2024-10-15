@@ -1,69 +1,70 @@
-What is the capital of Kazakhstan?
-Astana
-Almaty
-Nur-Sultan
-Shymkent
-Karagandy
+1. What is the capital of Kazakhstan?
+   a. Astana
+   b. Almaty
+   c. Nur-Sultan
+   d. Shymkent
+   e. Karagandy
 
-Which of the following is the largest city in Kazakhstan?
-Astana
-Almaty
-Nur-Sultan
-Shymkent
-Karagandy
+2. Which of the following is the largest city in Kazakhstan?
+   a. Astana
+   b. Almaty
+   c. Nur-Sultan
+   d. Shymkent
+   e. Karagandy
 
-What is the official language of Kazakhstan?
-Russian
-Kazakh
-English
-Turkish
-Mongolian
+3. What is the official language of Kazakhstan?
+   a. Russian
+   b. Kazakh
+   c. English
+   d. Turkish
+   e. Mongolian
 
-Which of the following is the highest mountain in Kazakhstan?
-Khan Tengri
-Manas
-Alatau
-Dzungarian Alatau
-Karatau
+4. Which of the following is the highest mountain in Kazakhstan?
+   a. Khan Tengri
+   b. Manas
+   c. Alatau
+   d. Dzungarian Alatau
+   e. Karatau
 
-What is the name of the currency used in Kazakhstan?
-Ruble
-Tenge
-Som
-Manat
-Lira
+5. What is the name of the currency used in Kazakhstan?
+   a. Ruble
+   b. Tenge
+   c. Som
+   d. Manat
+   e. Lira
 
-Which of the following is the largest lake in Kazakhstan?
-Balkhash
-Caspian Sea
-Aral Sea
-Issyk-Kul
-Sevan
+6. Which of the following is the largest lake in Kazakhstan?
+   a. Balkhash
+   b. Caspian Sea
+   c. Aral Sea
+   d. Issyk-Kul
+   e. Sevan
 
-What is the name of the famous Kazakh folk instrument?
-Dutar
-Dombra
-Kobyz
-Syrnai
-Tuyduk
+7. What is the name of the famous Kazakh folk instrument?
+   a. Dutar
+   b. Dombra
+   c. Kobyz
+   d. Syrnai
+   e. Tuyduk
 
-Which of the following is a popular Kazakh traditional dance?
-Kazakh Dance
-Kazakh Waltz
-Kazakh Tango
-Kazakh Folk Dance
-Kazakh Classical Dance
+8. Which of the following is a popular Kazakh traditional dance?
+   a. Kazakh Dance
+   b. Kazakh Waltz
+   c. Kazakh Tango
+   d. Kazakh Folk Dance
+   e. Kazakh Classical Dance
 
-What is the name of the famous Kazakh folk music ensemble?
-Kazakh Folk Music Ensemble
-Kazakh National Orchestra
-Kazakh Symphony Orchestra
-Kazakh Chamber Music Ensemble
-Kazakh Traditional Music Ensemble
+9. What is the name of the famous Kazakh folk music ensemble?
+   a. Kazakh Folk Music Ensemble
+   b. Kazakh National Orchestra
+   c. Kazakh Symphony Orchestra
+   d. Kazakh Chamber Music Ensemble
+   e. Kazakh Traditional Music Ensemble
 
-Which of the following is a famous Kazakh historical figure?
-Ablai Khan
-Kenesary Kasym Khan
-Abay Kunanbayev
-Zhambyl Zhabayev
-Magzhan Meddegaliyev
+10. Which of the following is a famous Kazakh historical figure?
+   a. Ablai Khan
+   b. Kenesary Kasym Khan
+   c. Abay Kunanbayev
+   d. Zhambyl Zhabayev
+   e. Magzhan Meddegaliyev
+
