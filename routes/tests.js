@@ -1,7 +1,8 @@
 // routes/tests.js
 const express = require("express");
-const { spawn } = require("child_process");
 const fs = require("fs");
+const db = require("../db"); // Your PostgreSQL connection pool
+const { parseQnAs } = require("../util");
 
 const router = express.Router();
 const path = require("path");
@@ -60,50 +61,52 @@ router.get("/:filename", (req, res) => {
 // Endpoint to handle form submission
 router.post("/", async (req, res) => {
   const { testName, questions } = req.body;
-  console.log(testName, questions);
-  // Ensure input data is provided
+
+  // Validation: Check if both testName and questions are provided
   if (!testName || !questions) {
     return res
       .status(400)
-      .json({ message: "Test name and questions are required" });
+      .json({ message: "Test name and questions are required." });
   }
 
-  const filename = `${testName}.txt`;
-  const filepath = path.join(__dirname, "../generated-tests", filename);
+  const parsedQuestions = parseQnAs(questions);
+  console.log("parsedQuestions: ", parsedQuestions);
   try {
-    // Spawn Python process to generate test file
-    const pyProcess = spawn("python", [
-      "test_generator.py", // python script filename
-      questions, // 1st arg - user's input
-      filepath, // 2nd arg - file to write to
-    ]);
+    // Begin transaction to insert all test questions
+    await db.query("BEGIN");
 
-    // Handle Python script 'print' output
-    pyProcess.stdout.on("data", (data) => {
-      console.log(`stdout: ${data}`);
-    });
+    // Insert each question into the tests table
+    for (const questionObj of parsedQuestions) {
+      const { question, instruction, correct_answer, all_answers } =
+        questionObj;
 
-    // Handle Python script error
-    pyProcess.stderr.on("data", (data) => {
-      console.error(`stderr: ${data}`);
-    });
+      const query = `
+        INSERT INTO tests (test_name, question, instruction, correct_answer, all_answers)
+        VALUES ($1, $2, $3, $4, $5)
+      `;
+      const values = [
+        testName,
+        question,
+        instruction,
+        correct_answer,
+        all_answers,
+      ];
 
-    pyProcess.on("close", (code) => {
-      if (code !== 0) {
-        // Handle Python script error
-        return res.status(500).json({ message: "Error generating test file." });
-      }
+      await db.query(query, values); // Insert into PostgreSQL
+    }
 
-      // Successfully generated file, send response
-      return res.status(200).json({
-        message: "Test generated successfully.",
-        downloadLink: `/tests/${filename}`,
-      });
-    });
+    // Commit the transaction
+    await db.query("COMMIT");
+
+    // Send success response
+    res.status(201).json({ message: "Test submitted successfully." });
   } catch (error) {
-    // Catch any other unexpected errors
-    console.error("Server error:", error);
-    return res.status(500).json({ message: "Internal server error." });
+    // Rollback transaction if any error occurs
+    await db.query("ROLLBACK");
+    console.error("Error inserting test:", error);
+    res
+      .status(500)
+      .json({ message: "Failed to submit test. Please try again later." });
   }
 });
 

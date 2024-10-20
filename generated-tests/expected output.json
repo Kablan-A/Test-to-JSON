@@ -1,0 +1,124 @@
+{
+  "data": [
+    {
+      "question": "What is the capital of Kazakhstan?",
+      "instruction": "(choose one)",
+      "correct_answer": "Astana",
+      "all_answers": [
+        "Astana",
+        "Almaty",
+        "Nur-Sultan",
+        "Shymkent",
+        "Karagandy"
+      ]
+    },
+    {
+      "question": "Which of the following is the largest city in Kazakhstan?",
+      "instruction": "(choose one)",
+      "correct_answer": "Astana",
+      "all_answers": [
+        "Astana",
+        "Almaty",
+        "Nur-Sultan",
+        "Shymkent",
+        "Karagandy"
+      ]
+    },
+    {
+      "question": "What is the official language of Kazakhstan?",
+      "instruction": "(choose one)",
+      "correct_answer": "Russian",
+      "all_answers": [
+        "Russian",
+        "Kazakh",
+        "English",
+        "Turkish",
+        "Mongolian"
+      ]
+    },
+    {
+      "question": "Which of the following is the highest mountain in Kazakhstan?",
+      "instruction": "(choose one)",
+      "correct_answer": "Khan Tengri",
+      "all_answers": [
+        "Khan Tengri",
+        "Manas",
+        "Alatau",
+        "Dzungarian Alatau",
+        "Karatau"
+      ]
+    },
+    {
+      "question": "What is the name of the currency used in Kazakhstan?",
+      "instruction": "(choose one)",
+      "correct_answer": "Ruble",
+      "all_answers": [
+        "Ruble",
+        "Tenge",
+        "Som",
+        "Manat",
+        "Lira"
+      ]
+    },
+    {
+      "question": "Which of the following is the largest lake in Kazakhstan?",
+      "instruction": "",
+      "correct_answer": "Balkhash",
+      "all_answers": [
+        "Balkhash",
+        "Caspian Sea",
+        "Aral Sea",
+        "Issyk-Kul",
+        "Sevan"
+      ]
+    },
+    {
+      "question": "What is the name of the famous Kazakh folk instrument?",
+      "instruction": "",
+      "correct_answer": "Dutar",
+      "all_answers": [
+        "Dutar",
+        "Dombra",
+        "Kobyz",
+        "Syrnai",
+        "Tuyduk"
+      ]
+    },
+    {
+      "question": "Which of the following is a popular Kazakh traditional dance?",
+      "instruction": "",
+      "correct_answer": "Kazakh Dance",
+      "all_answers": [
+        "Kazakh Dance",
+        "Kazakh Waltz",
+        "Kazakh Tango",
+        "Kazakh Folk Dance",
+        "Kazakh Classical Dance"
+      ]
+    },
+    {
+      "question": "What is the name of the famous Kazakh folk music ensemble?",
+      "instruction": "",
+      "correct_answer": "Kazakh Folk Music Ensemble",
+      "all_answers": [
+        "Kazakh Folk Music Ensemble",
+        "Kazakh National Orchestra",
+        "Kazakh Symphony Orchestra",
+        "Kazakh Chamber Music Ensemble",
+        "Kazakh Traditional Music Ensemble"
+      ]
+    },
+    {
+      "question": "Which of the following is a famous Kazakh historical figure?",
+      "instruction": "true or TRUE?",
+      "correct_answer": "Ablai Khan",
+      "all_answers": [
+        "Ablai Khan",
+        "Kenesary Kasym Khan",
+        "Abay Kunanbayev",
+        "Zhambyl Zhabayev",
+        "Magzhan Meddegaliyev"
+      ]
+    }
+  ]
+}

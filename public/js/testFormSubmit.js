@@ -6,7 +6,7 @@ testForm.onsubmit = async (event) => {
   event.preventDefault(); // Prevent form from refreshing the page
   const formData = new FormData(testForm);
   const formDataObject = Object.fromEntries(formData.entries());
-  console.log(formDataObject);
+  console.log("form data: ", formDataObject);
 
   testFormBtn.classList.add("btn-secondary");
   try {
@@ -22,9 +22,6 @@ testForm.onsubmit = async (event) => {
       // If response is not ok, throw an error
       throw new Error(`Error: ${response.statusText}`);
     }
-
-    const result = await response.json();
-    resultDiv.innerHTML = `<p class="text-success">${result.message}</p><a href="${result.downloadLink}" download="true">Download your test</a>`;
   } catch (error) {
     // Display the error message
     resultDiv.innerHTML = `<p class="text-danger">Error: ${error.message}</p>`;
