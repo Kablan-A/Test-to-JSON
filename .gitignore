@@ -1,2 +1,6 @@
 .env
 sql
+# Local Netlify folder
+.netlify
+node_modules/
+server.js
