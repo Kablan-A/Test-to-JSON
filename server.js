@@ -10,7 +10,6 @@ const path = require("path");
 app.use(express.json());
 // Serve static files from the "public" folder
 app.use(express.static(path.join(__dirname, "public")));
-// For incorrect requests
 
 // Ensure the 'generated-tests' directory exists for storing files
 const GEN_TESTS_DIR = path.join(__dirname, "generated-tests");
@@ -20,9 +19,10 @@ if (!fs.existsSync(GEN_TESTS_DIR)) {
 
 // 'import' tests module from routes. it has endpoints for tests
 // All endpoints start with '/tests'
-const tests = require(path.join(__dirname, "routes/tests.js"));
-app.use("/tests", tests);
+const testToJson = require(path.join(__dirname, "./routes/test-to-json.js"));
+app.use("/api/test-to-json", testToJson);
 
+// For incorrect requests
 app.use((req, res) => {
   res.status(404).send("<h1>404: This page doesn't exit</h1>");
 });

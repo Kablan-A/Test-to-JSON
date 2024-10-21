@@ -10,12 +10,12 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <script defer src="./js/testFormSubmit.js"></script>
+    <script defer src="./js/json-test-form-submit.js"></script>
   </head>
   <body>
     <nav class="navbar bg-body-tertiary navbar-expand-md">
       <div class="container-fluid">
-        <a class="navbar-brand display-5" href="/">Test generator</a>
+        <a class="navbar-brand display-5" href="/">Test to JSON</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -48,10 +48,12 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./my-tests.html">My Tests</a>
+                <a class="nav-link" href="./my-json-tests.html"
+                  >My JSON tests</a
+                >
               </li>
             </ul>
           </div>
@@ -62,7 +64,11 @@
     <main class="px-3 py-5">
       <div class="container bg-dark-subtle p-3 rounded-3">
         <h1 class="display-6 text-light-emphasis mb-4">Generate your test</h1>
-        <form novalidate class="form-floating needs-validation" id="testForm">
+        <form
+          novalidate
+          class="form-floating needs-validation"
+          id="jsonTestForm"
+        >
           <input
             type="text"
             class="form-control w-50"
